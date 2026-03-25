@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Mar 25 2026 07:56:02 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://mgss81a.aws.msg.de:44300/sap/opu/odata/sap/ZRI_SB_CLM_PROC",
+    "appName": "zsrt_claims",
+    "appTitle": "Claims Replication",
+    "appDescription": "Claims Replication",
+    "appNamespace": "srt.claims",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.14",
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.21.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Claims"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
