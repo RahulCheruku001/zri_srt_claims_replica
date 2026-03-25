@@ -158,17 +158,8 @@
                         },
                         "tableSettings": {
                             "type": "GridTable",
-							"multiSelect": true,
-							"selectAll": true
-                        }
-                    }
-                },
-                "pages": {
-                    "ObjectPage|Claims": {
-                        "entitySet": "Claims",
-                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                            "multiSelect": true,
+                            "selectAll": true
                         }
                     }
                 }
