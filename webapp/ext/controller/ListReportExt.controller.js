@@ -118,7 +118,7 @@ sap.ui.define([
                 });
 
                 var oDialog = new sap.m.Dialog({
-                    title: "Business Partner Copy Logs",
+                    title: "Claims Copy Logs",
                     content: [oTable],
                     buttons: [
                         new sap.m.Button({
