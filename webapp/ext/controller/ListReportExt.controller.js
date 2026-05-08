@@ -214,10 +214,13 @@ sap.ui.define([
                     growingThreshold: 50,
                     growingScrollToLoad: true,
                     columns: [
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Source Loss Number" }) }),
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Target Loss Number" }) }),
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Process Ref Id" }) }),
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Status" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Loss Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Object Type" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Source Object Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Process Ref ID" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Target Object Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Target System" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Message Type" }) }),
                         new sap.m.Column({ header: new sap.m.Text({ text: "Message" }) })
                     ]
                 });
@@ -228,11 +231,14 @@ sap.ui.define([
                     path: "/results",
                     template: new sap.m.ColumnListItem({
                         cells: [
-                            new sap.m.Text({ text: "{Source_No}" }),
-                            new sap.m.Text({ text: "{Target_No}" }),
-                            new sap.m.Text({ text: "{Process_Id}" }),
-                            new sap.m.Text({ text: "{Status}" }),
-                            new sap.m.Text({ text: "{Message}" })
+                            new sap.m.Text({ text: "{mloss}" }),
+                            new sap.m.Text({ text: "{object_type}" }),
+                            new sap.m.Text({ text: "{SourceData}" }),
+                            new sap.m.Text({ text: "{processingID}" }),
+                            new sap.m.Text({ text: "{CreatedData}" }),
+                            new sap.m.Text({ text: "{syst}" }),
+                            new sap.m.Text({ text: "{type}" }),
+                            new sap.m.Text({ text: "{message}" })
                         ]
                     })
                 });
@@ -290,11 +296,14 @@ sap.ui.define([
 
         _exportToExcel: function (aData, fnCallback) {
             var aCols = [
-                { label: "Source Loss Number", property: "Source_No" },
-                { label: "Target Loss Number", property: "Target_No" },
-                { label: "Copy Ref Id", property: "Process_Id" },
-                { label: "Status", property: "Status" },
-                { label: "Message", property: "Message" }
+                { label: "Loss Number", property: "mloss" },
+                { label: "Object Type", property: "object_type" },
+                { label: "Source Object Number", property: "SourceData" },
+                { label: "Process Ref ID", property: "processingID" },
+                { label: "Target Object Number", property: "CreatedData" },
+                { label: "Target System", property: "syst" },
+                { label: "Message Type", property: "type" },
+                { label: "Message", property: "message" }
             ];
 
             var oSheet = new Spreadsheet({
