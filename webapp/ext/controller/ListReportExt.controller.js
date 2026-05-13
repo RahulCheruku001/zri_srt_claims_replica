@@ -64,7 +64,8 @@ sap.ui.define([
                             oModel.callFunction("/show_res", {
                                 method: "POST",
                                 urlParameters: {
-                                    schadnr: oData.schadnr
+                                    schadnr: oData.schadnr,
+                                    process_id: oData.process_id
                                 },
                                 success: function (oResult) {
                                     resolve(oResult.results || []);
@@ -140,7 +141,8 @@ sap.ui.define([
                             oModel.callFunction("/show_res", {
                                 method: "POST",
                                 urlParameters: {
-                                    schadnr: oData.schadnr
+                                    schadnr: oData.schadnr,
+                                    process_id: oData.process_id
                                 },
                                 success: function (oResult) {
                                     resolve(oResult.results || []);
